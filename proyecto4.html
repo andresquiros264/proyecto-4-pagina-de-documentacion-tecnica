@@ -1,0 +1,854 @@
+<!-- codigo de frecodecamp para el menu run test
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto4 doc</title>
+    <!-- <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="Proyecto4.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>Documentación de JavaScript</header>
+      <ul>
+        <li><a href="#introduccion" class="nav-link">introduccion</a></li>
+        <li>
+          <a href="#gramatica_y_tipos" class="nav-link">Gramatica y Tipos</a>
+        </li>
+        <li>
+          <a href="#Control_de_flujo_y_manejo_de_errores" class="nav-link"
+            >Control de flujo y manejo de errores</a
+          >
+        </li>
+        <li>
+          <a href="#Bucles_e_iteración" class="nav-link">Bucles e iteración</a>
+        </li>
+        <li>
+          <a href="#expresiones_y_operadores" class="nav-link"
+            >expresiones y operadores</a
+          >
+        </li>
+        <li>
+          <a href="#numeros_y_fechas" class="nav-link">numeros y fechas</a>
+        </li>
+        <li>
+          <a href="#formato_de_texto" class="nav-link">formato de texto</a>
+        </li>
+        <li>
+          <a href="#programacion_meta" class="nav-link">programacion meta</a>
+        </li>
+        <li>
+          <a href="#uso_de_promesas" class="nav-link">Uso de promesas</a>
+        </li>
+        <li><a href="#referencia" class="nav-link">referencia</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduccion">
+        <header><h2>Introduccion</h2></header>
+        <article>
+          <h3 class="principal">¿Qué es JavaScript?</h3>
+          <p>
+            JavaScript es un lenguaje de scripting multiplataforma orientado a
+            objetos utilizado para hacer que las páginas web sean interactivas
+            (por ejemplo, tener animaciones complejas, botones en los que se
+            puede hacer clic, menús emergentes, etc.). También hay versiones más
+            avanzadas del lado del servidor de JavaScript, como Node.js, que le
+            permiten agregar más funcionalidad a un sitio web que descargar
+            archivos (como la colaboración en tiempo real entre varios equipos).
+            Dentro de un entorno host (por ejemplo, un navegador web),
+            JavaScript se puede conectar a los objetos de su entorno para
+            proporcionar control mediante programación sobre ellos.
+          </p>
+          <p>
+            JavaScript contiene una biblioteca estándar de objetos, como , y , y
+            un conjunto principal de elementos de lenguaje como operadores,
+            estructuras de control y instrucciones. JavaScript principal se
+            puede ampliar para una variedad de propósitos complementándolo con
+            objetos adicionales; por ejemplo:ArrayDateMath
+          </p>
+          <ul>
+            <li>
+              <p>
+                JavaScript del lado cliente amplía el lenguaje principal
+                proporcionando objetos para controlar un explorador y su modelo
+                de objetos de documento (DOM). Por ejemplo, las extensiones del
+                lado cliente permiten a una aplicación colocar elementos en un
+                formulario HTML y responder a eventos de usuario como clics del
+                mouse, entrada de formulario y navegación de página.
+              </p>
+            </li>
+            <li>
+              <p>
+                JavaScript del lado servidor amplía el lenguaje principal
+                proporcionando objetos relevantes para ejecutar JavaScript en un
+                servidor. Por ejemplo, las extensiones del lado servidor
+                permiten a una aplicación comunicarse con una base de datos,
+                proporcionar continuidad de la información de una invocación a
+                otra de la aplicación o realizar manipulaciones de archivos en
+                un servidor. Esto significa que en el navegador, JavaScript
+                puede cambiar la forma en que se ve la página web (DOM). Y, del
+                mismo modo, Node.js JavaScript en el servidor puede responder a
+                solicitudes personalizadas de código escrito en el navegador.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="gramatica_y_tipos">
+        <header>Gramatica y tipos</header>
+        <h3>Basico</h3>
+        <article>
+          <p>
+            JavaScript toma prestada la mayor parte de su sintaxis de Java, C y
+            C++, pero también ha sido influenciada por Awk, Perl y Python.
+          </p>
+          <p>
+            JavaScript distingue entre mayúsculas y minúsculas y utiliza el
+            juego de caracteres Unicode. Por ejemplo, la palabra Früh (que
+            significa "temprano" en alemán) podría utilizarse como un nombre
+            variable.
+          </p>
+          <p>
+            JavaScript del lado cliente amplía el lenguaje principal
+            proporcionando objetos para controlar un explorador y su modelo de
+            objetos de documento (DOM). Por ejemplo, las extensiones del lado
+            cliente permiten a una aplicación colocar elementos en un formulario
+            HTML y responder a eventos de usuario como clics del mouse, entrada
+            de formulario y navegación de página.
+          </p>
+          <p>
+            JavaScript del lado servidor amplía el lenguaje principal
+            proporcionando objetos relevantes para ejecutar JavaScript en un
+            servidor. Por ejemplo, las extensiones del lado servidor permiten a
+            una aplicación comunicarse con una base de datos, proporcionar
+            continuidad de la información de una invocación a otra de la
+            aplicación o realizar manipulaciones de archivos en un servidor.
+            Esto significa que en el navegador, JavaScript puede cambiar la
+            forma en que se ve la página web (DOM). Y, del mismo modo, Node.js
+            JavaScript en el servidor puede responder a solicitudes
+            personalizadas de código escrito en el navegador.
+          </p>
+          <pre><code>let Früh = "foobar"</code></pre>
+          <p>
+            En JavaScript, las instrucciones se denominan instrucciones y están
+            separadas por punto y coma <code>(;)</code>
+          </p>
+          <h3 class="principal">Evalucion de variables</h3>
+          <p>
+            Una variable declarada mediante la instrucción or sin ningún valor
+            asignado especificado tiene el valor de undefined.varlet Un intento
+            de tener acceso a una variable no declarada da como resultado una
+            excepción ReferenceError:
+          </p>
+          <pre>
+                <code>
+                  var a; console.log('The value of a is ' + a); // The value of a is
+                  undefined </code
+                >
+              </pre>
+          <br />
+          <pre>
+                <code
+                  >console.log('The value of b is ' + b); // The value of b is
+                  undefined var b; // This one may puzzle you until you read 'Variable
+                  hoisting' below</code
+                >
+              </pre>
+          <br />
+          <pre>
+                <code
+                  >console.log('The value of c is ' + c); // Uncaught ReferenceError:
+                  c is not defined</code
+                >
+              </pre>
+          <br />
+          <pre>
+                <code
+                  >let x; console.log('The value of x is ' + x); // The value of x is
+                  undefined</code
+                >
+              </pre>
+          <br /><br />
+          <pre>
+                <code
+                  >console.log('The value of y is ' + y); // Uncaught ReferenceError:
+                  y is not defined let y;</code
+                >
+              </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Control_de_flujo_y_manejo_de_errores">
+        <header>Control de flujo y manejo de errores</header>
+        <h3>Declaracion de Bloque</h3>
+        <article>
+          <p>
+            JavaScript admite un conjunto compacto de declaraciones,
+            específicamente declaraciones de flujo de control, que puede
+            utilizar para incorporar una gran cantidad de interactividad en su
+            aplicación. Este capítulo proporciona una descripción general de
+            estas declaraciones.
+          </p>
+          <p>
+            La referencia de JavaScript contiene detalles exhaustivos sobre las
+            declaraciones de este capítulo. El carácter de punto y coma ( ;) se
+            utiliza para separar declaraciones en código JavaScript.
+          </p>
+          <p>
+            JavaScript del lado cliente amplía el lenguaje principal
+            proporcionando objetos para controlar un explorador y su modelo de
+            objetos de documento (DOM). Por ejemplo, las extensiones del lado
+            cliente permiten a una aplicación colocar elementos en un formulario
+            HTML y responder a eventos de usuario como clics del mouse, entrada
+            de formulario y navegación de página.
+          </p>
+          <p>
+            La declaración más básica es una declaración de bloque , que se
+            utiliza para agrupar declaraciones. El bloque está delimitado por un
+            par de llaves
+          </p>
+          <pre><code>{
+          statement_1;
+          statement_2;
+          ⋮
+          statement_n;
+        }</code></pre>
+          <p>
+            Instrucciones de bloque se utilizan comúnmente con los estados de
+            flujo de control ( if, for, while).
+            <code>while (x menor que 10) { x++; }</code>
+          </p>
+          <h4>Declaraciones condicionales</h4>
+          <p>
+            Una declaración condicional es un conjunto de comandos que se
+            ejecuta si una condición especificada es verdadera. JavaScript
+            admite dos declaraciones condicionales: if...elsey switch <br />
+            Utilice la ifdeclaración para ejecutar una declaración si una
+            condición lógica es true. Utilice la elsecláusula opcional para
+            ejecutar una declaración si la condición es false. <br />
+            Una ifdeclaración se ve así
+          </p>
+          <pre>
+                <code>
+                  if (condition) {
+          statement_1;
+        } else {
+          statement_2;
+        } </code
+                >
+              </pre>
+          <br />
+          <p>
+            Aquí, conditionpuede ser cualquier expresión que se evalúe como
+            trueo false. (Consulte Booleano para obtener una explicación de lo
+            que se evalúa como truey false). <br />
+            Si se conditionevalúa como true, statement_1se ejecuta. De lo
+            contrario, statement_2se ejecuta. statement_1y statement_2puede ser
+            cualquier declaración, incluidas otras ifdeclaraciones anidadas
+            <br />
+            También puede componer las declaraciones usando else ifpara tener
+            múltiples condiciones probadas en secuencia, de la siguiente manera
+          </p>
+          <pre>
+                <code
+                  >if (condition_1) {
+          statement_1;
+        } else if (condition_2) {
+          statement_2;
+        } else if (condition_n) {
+          statement_n;
+        } else {
+          statement_last;
+        }</code
+                >
+              </pre>
+        </article>
+      </section>
+      <section class="main-section" id="Bucles_e_iteración">
+        <header>Bucles e iteración</header>
+        <h3>Bucles</h3>
+        <article>
+          <p>
+            Los bucles ofrecen una forma rápida y sencilla de hacer algo
+            repetidamente. Este capítulo de la Guía de JavaScript presenta las
+            diferentes declaraciones de iteración disponibles para JavaScript.
+            <br />
+            <br />
+            Puedes pensar en un bucle como una versión computarizada del juego
+            en la que le dices a alguien que dé X pasos en una dirección, luego
+            Y pasos en otra. Por ejemplo, la idea "Ir cinco pasos hacia eleste"
+            podría expresarse de esta manera como un bucle
+          </p>
+          <code
+            >for (let step = 0; step menor que 5; step++) { // Runs 5 times,
+            with values of step 0 through 4. console.log('Walking east one
+            step'); }</code
+          >
+          <p>
+            Hay muchos tipos diferentes de bucles, pero todos esencialmente
+            hacen lo mismo: repiten una acción varias veces. (¡Tenga en cuenta
+            que es posible que ese número sea cero!) <br />
+            <br />
+            Los diversos mecanismos de bucle ofrecen diferentes formas de
+            determinar los puntos de inicio y finalización del bucle. Hay varias
+            situaciones que pueden ser atendidas más fácilmente por un tipo de
+            bucle que por otros. <br /><br />
+            Las declaraciones para bucles proporcionadas en JavaScript son
+          </p>
+          <ul>
+            <li>los bucles</li>
+            <li>Para declaracion</li>
+            <li>Mientras que la declaracion</li>
+            <li>Declaracion etiquetada</li>
+          </ul>
+          <h3 class="principal">Para declaracion</h3>
+          <p>
+            Un forbucle se repite hasta que se evalúa una condición específica
+            false. El JavaScript forbucle es similar a la de Java y C forbucle.
+            <br /><br />
+            Una fordeclaración tiene el siguiente aspecto:
+          </p>
+          <pre><code>{
+        for ([initialExpression]; [conditionExpression]; [incrementExpression])
+          statement
+        }</code></pre>
+          <ol>
+            <li>
+              <p>
+                Se initialExpressionejecuta la expresión de inicialización , si
+                la hay. Esta expresión normalmente inicializa uno o más
+                contadores de bucles, pero la sintaxis permite una expresión de
+                cualquier grado de complejidad. Esta expresión también puede
+                declarar variables.
+              </p>
+            </li>
+            <li>
+              <p>
+                Se conditionExpressionevalúa la expresión. Si el valor de
+                conditionExpressiones verdadero, se ejecutan las sentencias de
+                bucle. Si el valor de conditiones falso, el forciclo termina.
+                (Si la conditionexpresión se omite por completo, se supone que
+                la condición es verdadera).
+              </p>
+            </li>
+            <li>
+              <p>
+                El statementejecuta. Para ejecutar varias declaraciones, use una
+                declaración de bloque ( { ... }) para agrupar esas
+                declaraciones.
+              </p>
+            </li>
+            <li>
+              <p>
+                Si está presente, incrementExpressionse ejecuta la expresión de
+                actualización .
+              </p>
+            </li>
+            <li>
+              <p>El control vuelve al paso 2</p>
+            </li>
+          </ol>
+          <h4>Ejemplo</h4>
+          <p>
+            En el siguiente ejemplo, la función contiene una fordeclaración que
+            cuenta el número de opciones seleccionadas en una lista de
+            desplazamiento (un elemento que permite múltiples selecciones). La
+            fordeclaración declara la variable iy la inicializa en 0. Comprueba
+            que isea ​​menor que el número de opciones en el elemento, realiza
+            la ifinstrucción siguiente y aumenta ien después de cada pasada por
+            el bucle.
+          </p>
+          <code>
+            ( form name="selectForm"/) (p) (label for="musicTypes" /) Choose
+            some music types, then click the button below: (/label) (select
+            id="musicTypes" name=" musicTypes" multiple="multiple"/) (option
+            selected="selected") R&B(/option) (option) Jazz(/option) (option)
+            Blues (/option) (option) New Age(/option) (option Classical(/option
+            (option) Opera(/option) (/select) (/p) (p) (input id="btn"
+            type="button" value="How many are selected?"/) (/p) (script)
+            function howMany(selectObject) { let numberSelected = 0; for (let i
+            = 0; i (menorque) selectObject.options.length; i++) { if
+            (selectObject.options[i].selected) { numberSelected++; } } return
+            numberSelected; } let btn = document.getElementById("btn");
+            btn.addEventListener("click", function () { alert( "Number of
+            options selected: " + howMany(document.selectForm.musicTypes) ); });
+            (/script)
+          </code>
+          <h3 class="principal">Mientras que la declaracion</h3>
+          <p>
+            Una whiledeclaración ejecuta sus declaraciones siempre que se evalúe
+            una condición especificada true. Una whiledeclaración tiene el
+            siguiente aspecto:
+          </p>
+          <pre>
+                <code>
+                  while (condition)
+          statement
+        } </code
+                >
+              </pre>
+          <br />
+          <p>
+            Si se (condition) convierte (false), statementdentro del bucle deja
+            de ejecutarse y el control pasa a la instrucción que sigue al bucle.
+            <br />
+            La prueba de (condición )ocurre antes statement de que se ejecute en
+            el bucle. Si la (condición )regresa true, statementse ejecuta y
+            conditionse prueba nuevamente. Si la (condición )regresa (false), la
+            ejecución se detiene y el control se pasa a la siguiente instrucción
+            while. <br />
+            Para ejecutar varias declaraciones, use una declaración de bloque (
+            { ... }) para agrupar esas declaraciones. <br />
+          </p>
+          <h4>Ejemplo 1</h4>
+          <p>
+            El siguiente whileciclo se repite siempre que nsea ​​menor que 3:
+          </p>
+          <pre><code>
+                    let n = 0;
+        let x = 0;
+        while (n (menor que) 3) {
+          n++;
+          x += n;
+        }
+      </code></pre>
+          <p>
+            Con cada iteración, el ciclo aumenta ny agrega ese valor a x. Por
+            tanto, xy nadopte los siguientes valores
+          </p>
+          <ul>
+            <li>Después de la primera pasada: n= 1 y x= 1</li>
+            <li>Después de la segunda pasada: n= 2 y x= 3</li>
+            <li>Después de la tercera pasada: n= 3 y x= 6</li>
+          </ul>
+          <p>
+            Después de completar la tercera pasada, la condición n (meno que) 3
+            ya no es (true), por lo que el ciclo termina
+          </p>
+          <h4>Ejemplo 2</h4>
+          <p>
+            Evite los bucles infinitos. Asegúrese de que la condición en un
+            bucle se convierta eventualmente; de ​​lo (false)contrario, ¡el
+            bucle nunca terminará! Las declaraciones en el siguiente (while)
+            ciclo se ejecutan para siempre porque la condición nunca se
+            convierte en (false):
+          </p>
+          <code
+            >// Infinite loops are bad! while (true) { console.log('Hello,
+            world!'); }</code
+          >
+          <h4>Declaracion etiquetada</h4>
+          <p>
+            A (label) proporciona una declaración con un identificador que le
+            permite hacer referencia a ella en otra parte de su programa. Por
+            ejemplo, puede usar una etiqueta para identificar un bucle y luego
+            usar las instrucciones (break) o (continue) para indicar si un
+            programa debe interrumpir el bucle o continuar su ejecución.
+            <br />
+            La sintaxis de la declaración etiquetada es similar a la siguiente:
+          </p>
+          <pre><code>label :
+          statement</code></pre>
+          <p>
+            El valor de labelpuede ser cualquier identificador de JavaScript que
+            no sea una palabra reservada. El statementque identifica con una
+            etiqueta puede ser cualquier declaración.
+          </p>
+          <h4>Ejemplo</h4>
+          <p>
+            En este ejemplo, la etiqueta markLoop identifica un while bucle.
+          </p>
+          <code>markLoop: while (theMark === true) { doSomething(); }</code>
+        </article>
+      </section>
+      <section class="main-section" id="expresiones_y_operadores">
+        <header>expresiones y operadores</header>
+        <h3>Operadores</h3>
+        <article>
+          <p>
+            JavaScript tiene los siguientes tipos de operadores. En esta sección
+            se describen los operadores y se contiene información sobre la
+            precedencia del operador.
+          </p>
+          <ul>
+            <li>Operadores de asignacion</li>
+            <li>Operadores de comparacion</li>
+            <li>Operadores de aritmeticos</li>
+            <li>Operadores de bit a bit</li>
+            <li>Operadores de logicos</li>
+          </ul>
+          <p>
+            JavaScript tiene operadores binarios y unarios, y un operador
+            ternario especial, el operador condicional. Un operador binario
+            requiere dos operandos, uno ante el operador y otro después del
+            operador.
+          </p>
+          <h3 class="principal">Operadores de asignacion</h3>
+          <p>
+            Un operador de asignación asigna un valor a su operando izquierdo en
+            función del valor de su operando derecho. El operador de asignación
+            simple es igual (), que asigna el valor de su operando derecho a su
+            operando izquierdo. Es decir, asigna el valor de a .=x = yyx También
+            hay operadores de asignación compuesta que son abreviaturas para las
+            operaciones enumeradas en la tabla siguiente
+          </p>
+          <h3 class="principal">Valor devuelto y encadenamiento</h3>
+          <p>
+            Al igual que la mayoría de las expresiones, las asignaciones como
+            tienen un valor devuelto. Se puede recuperar asignando, por ejemplo,
+            la asignación de la expresión o el registro de la misma:x = y
+          </p>
+          <pre>
+                <code
+                  >console.log(z); // Log the return value of the assignment x =
+                  y.</code
+                >
+              </pre>
+          <pre>
+                <code
+                  >console.log(z); // Log the return value of the assignment x =
+                  y</code
+                >
+              </pre>
+          <pre><code>console.log(x = y); // Or log the return value directly.</code></pre>
+        </article>
+      </section>
+      <section class="main-section" id="numeros_y_fechas">
+        <header>Numeros y fechas</header>
+        <h3>Numeros</h3>
+        <article>
+          <p>
+            Este capítulo presenta los conceptos, objetos y funciones que se
+            utilizan para trabajar y realizar cálculos utilizando números y
+            fechas en JavaScript. Esto incluye el uso de números escritos en
+            varias bases, incluidos decimal, binario y hexadecimal, así como el
+            uso del Mathobjeto global para realizar una amplia variedad de
+            operaciones matemáticas con números.
+          </p>
+          <ul>
+            <li>Numeros</li>
+            <li>Numeros decimales</li>
+            <li>Numeros binarios</li>
+            <li>Numeros octales</li>
+            <li>Exponencion</li>
+            <li>Objeto numerico</li>
+          </ul>
+          <p>
+            En JavaScript, los números se implementan en
+            <code
+              >formato binario de 64 bits de doble precisión IEEE 754 (es decir,
+              un número entre ± 2 −1022 y ± 2 +1023 , o aproximadamente ± 10
+              −308 a ± 10 +308 , con una precisión numérica de 53 bits). Los
+              valores enteros hasta ± 2 53 - 1 se pueden representar con
+              exactitud.</code
+            ><br />
+            Además de ser capaz de representar números de punto flotante, el
+            tipo de número tiene tres valores simbólicos: +Infinity, -Infinity,
+            y NaN(no-a-número). <br />
+            Una adición más reciente a JavaScript es BigIntque le permite
+            representar números enteros que pueden ser muy grandes. Sin
+            BigIntembargo, existen advertencias sobre el uso ; por ejemplo, no
+            puede mezclar y hacer coincidir valores BigInty Numberen la misma
+            operación, y no puede usar el Mathobjeto con BigIntvalores. Consulte
+            también estructuras y tipos de datos de JavaScript para conocer el
+            contexto con otros tipos primitivos en JavaScript.
+            <br />
+            Puede utilizar cuatro tipos de literales numéricos: decimal,
+            binario, octal y hexadecimal. <br />
+          </p>
+          <h3 class="principal">Numeros decimales</h3>
+          <p>
+            La sintaxis de números binarios utiliza un cero inicial seguido de
+            una letra latina en minúscula o mayúscula "B" ( 0bo 0B). Si los
+            dígitos después de 0bno son 0 o 1, SyntaxErrorse arroja lo siguiente
+            : "Faltan dígitos binarios después de 0b".
+          </p>
+          <pre><code>var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
+        var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
+        var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607</code></pre>
+          <h3 class="principal">Numeros octales</h3>
+          <p>
+            La sintaxis de números octales utiliza un cero a la izquierda. Si
+            los dígitos después de 0están fuera del rango de 0 a 7, el número se
+            interpretará como un número decimal.
+          </p>
+          <pre>
+                <code
+                  >var n = 0755; // 493
+        var m = 0644; // 420</code
+                >
+              </pre>
+          <h3 class="principal">Numeros exadecimales</h3>
+          <p>
+            La sintaxis de números hexadecimales utiliza un cero inicial seguido
+            de una letra latina en minúscula o mayúscula "X" ( 0xo 0X). Si los
+            dígitos después de 0x están fuera del rango (0123456789ABCDEF),
+            SyntaxErrorse lanza lo siguiente : "El identificador comienza
+            inmediatamente después del literal numérico".
+          </p>
+          <pre>
+                <code
+                  >0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+        0x123456789ABCDEF   // 81985529216486900
+        0XA                 // 10</code
+                >
+              </pre>
+          <h3 class="principal">Exponencion</h3>
+          <pre><code>1E3   // 1000
+        2e6   // 2000000
+        0.1e2 // 10</code></pre>
+          <h3 class="principal">Objeto numerico</h3>
+          <pre><code>var biggestNum = Number.MAX_VALUE;
+        var smallestNum = Number.MIN_VALUE;
+        var infiniteNum = Number.POSITIVE_INFINITY;
+        var negInfiniteNum = Number.NEGATIVE_INFINITY;
+        var notANum = Number.NaN;</code></pre>
+          <p>
+            Siempre se refiere a una propiedad del Numberobjeto predefinido como
+            se muestra arriba, y no como una propiedad de un Numberobjeto que
+            crea usted mismo.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="formato_de_texto">
+        <header>Formato de texto</header>
+        <h3>Instrumentos de cuerda</h3>
+        <article>
+          <p>
+            Este capítulo presenta cómo trabajar con cadenas y texto en
+            JavaScript.
+          </p>
+          <ul>
+            <li>Instrumentos de cuerda</li>
+            <li>literales de cadena/li></li>
+            <li>Secuencias de escape hexadecimales</li>
+            <li>Secuencias de escape unicode</li>
+            <li>Escapes de puntos de codigo Unicode</li>
+            <li>Objetos de cadena</li>
+          </ul>
+          <p>
+            El tipo de cadena de JavaScript se utiliza para representar datos
+            textuales. Es un conjunto de "elementos" de valores enteros sin
+            signo de 16 bits (unidades de código UTF-16). Cada elemento de la
+            Cadena ocupa una posición en la Cadena. El primer elemento está en
+            el índice 0, el siguiente en el índice 1, y así sucesivamente. La
+            longitud de una cadena es el número de elementos que contiene. Puede
+            crear cadenas utilizando literales de cadena u objetos de cadena.
+          </p>
+          <h3 class="principal">literales de cadena</h3>
+          <p>
+            Puede crear cadenas simples utilizando comillas simples o dobles
+          </p>
+          <pre><code>'foo'
+        "bar"</code></pre>
+          <h3 class="principal">Secuencias de escape hexadecimales</h3>
+          <p>
+            El número después de \ x se interpreta como un número hexadecimal
+          </p>
+          <pre>
+                <code
+                  >v'\xA9' // "©"</code
+                >
+              </pre>
+          <h3 class="principal">Secuencias de escape unicode</h3>
+          <p>
+            Las secuencias de escape Unicode requieren al menos cuatro dígitos
+            hexadecimales siguientes \u.
+          </p>
+          <pre>
+                <code
+                  >'\u00A9' // "©"</code
+                >
+              </pre>
+          <h3 class="principal">Escapes de puntos de codigo unicode</h3>
+          <p>
+            Nuevo en ECMAScript 2015. Con los escapes de puntos de código
+            Unicode, cualquier carácter puede escaparse usando números
+            hexadecimales para que sea posible usar puntos de código Unicode
+            hasta 0x10FFFF. Con los escapes Unicode simples, a menudo es
+            necesario escribir las mitades sustitutas por separado para lograr
+            el mismo resultado.
+          </p>
+          <pre><code>'\u{2F804}'
+                // the same with simple Unicode escapes
+                '\uD87E\uDC04'</code></pre>
+          <h3 class="principal">Objetos de cadena</h3>
+          <p>
+            l Stringobjeto es un envoltorio alrededor del tipo de datos
+            primitivo de cadena.
+          </p>
+          pre>codeconst foo = new String('foo'); // Creates a String object
+          console.log(foo); // Displays: [String: 'foo'] typeof foo; // Returns
+          'object'
+        </article>
+      </section>
+      <section class="main-section" id="programacion_meta">
+        <header>Programacion meta</header>
+        <h3>Proxis</h3>
+        <article>
+          <p>
+            JA partir de ECMAScript 2015, JavaScript obtiene compatibilidad con
+            los objetos Proxy y Reflect, lo que le permite interceptar y definir
+            el comportamiento personalizado para operaciones de lenguaje
+            fundamental (por ejemplo, búsqueda de propiedades, asignación,
+            enumeración, invocación de funciones, etc.). Con la ayuda de estos
+            dos objetos que puede programar en el meta nivel de JavaScript.
+            Introducidos en ECMAScript 6, los objetos Proxy le permiten
+            interceptar ciertas operaciones e implementar comportamientos
+            personalizados.Por ejemplo, obtener una propiedad en un objeto:
+          </p>
+          <h3 class="principal">Terminologia</h3>
+          <p>
+            Los siguientes términos se utilizan al hablar de la funcionalidad de
+            los proxies.
+          </p>
+          <ul>
+            <li class="series">Controlador</li>
+            <li class="series-2">
+              <p>Objeto marcador de posición que contiene reventados</p>
+            </li>
+            <li class="series">Trampas</li>
+            <li class="series-2">
+              <p>
+                Los métodos que proporcionan acceso a la propiedad. (Esto es
+                análogo al concepto de trampas en los sistemas operativos.)
+              </p>
+            </li>
+            <li class="series">Blanco</li>
+            <li class="series-2">
+              <p>
+                Objeto que virtualiza el proxy. A menudo se utiliza como
+                back-end de almacenamiento para el proxy. Las invariables
+                (semánticas que permanecen sin cambios) con respecto a la
+                extensibilidad del objeto o las propiedades no configurables se
+                verifican con respecto al destino.
+              </p>
+            </li>
+            <li class="series">Invariantes</li>
+            <li class="series-2">
+              <p>
+                Semántica que permanece sin cambios al implementar operaciones
+                personalizadas se denominan invariables. Si infringe las
+                invariables de un controlador, se lanzará un TypeError.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="uso_de_promesas">
+        <header>Uso de promesas</header>
+        <h3>Promesas</h3>
+        <article>
+          <p>
+            Un Promise es un objeto que representa la finalización o el error
+            finales de una operación asincrónica. Dado que la mayoría de las
+            personas son consumidores de promesas ya creadas, esta guía
+            explicará el consumo de promesas devueltas antes de explicar cómo
+            crearlas. Esencialmente, una promesa es un objeto devuelto al que se
+            adjuntan devoluciones de llamada, en lugar de pasar devoluciones de
+            llamada a una función.
+          </p>
+          <pre>
+                <code
+                  >function successCallback(result) { console.log("Audio file ready at
+                  URL: " + result); } function failureCallback(error) {
+                  console.error("Error generating audio file: " + error); }
+                  createAudioFileAsync(audioSettings, successCallback,
+                  failureCallback);</code
+                >
+              </pre>
+          <p>
+            Si se reescriben para devolver una promesa, usted adjuntaría sus
+            devoluciones de llamada a ella en su lugar:createAudioFileAsync()
+          </p>
+          <h3 class="principal">Garantiza</h3>
+          <p>
+            A diferencia de las devoluciones de llamada pasadas pasadas a la
+            antigua usanza, una promesa viene con algunas garantías
+          </p>
+          <ul>
+            <li>
+              <p>
+                Las devoluciones de llamada agregadas nunca se invocarán antes
+                de la finalización de la ejecución actual del bucle de eventos
+                de JavaScript.then()
+              </p>
+            </li>
+            <li>
+              <p>
+                Estas devoluciones de llamada se invocarán incluso si se
+                agregaron después del éxito o error de la operación asincrónica
+                que representa la promesa.
+              </p>
+            </li>
+            <li>
+              <p>
+                Se pueden agregar varias devoluciones de llamada llamando varias
+                veces. Serán invocados uno tras otro, en el orden en que fueron
+                insertados.then()
+              </p>
+            </li>
+          </ul>
+          <h3 class="principal">Encadenamiento</h3>
+          <p>
+            na necesidad común es ejecutar dos o más operaciones asincrónicas
+            consecutivas, donde cada operación posterior comienza cuando la
+            operación anterior se realiza correctamente, con el resultado del
+            paso anterior. Logramos esto creando una cadena de promesas.
+          </p>
+          <h3 class="principal">Valor devuelto y encadenamiento</h3>
+          <p>
+            Aquí está la magia: la función devuelve una nueva promesa,diferente
+            de la original:then()
+          </p>
+          <pre>
+                <code
+                  >const promise = doSomething(); const promise2 =
+                  promise.then(successCallback, failureCallback);</code
+                >
+              </pre>
+          <pre>
+                <code
+                  >const promise2 = doSomething().then(successCallback,
+                  failureCallback);</code
+                >
+              </pre>
+          <p>
+            Esta segunda promesa () representa la finalización no sólo de , sino
+            también de la o usted pasó, que pueden ser otras funciones
+            asincrónicas que devuelven una promesa. Cuando ese es el caso,
+            cualquier devolución de llamada agregada para ponerse en cola detrás
+            de la promesa devuelta por uno o
+            .promise2doSomething()successCallbackfailureCallbackpromise2successCallbackfailureCallback
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="referencia">
+        <header><h2>Referencia</h2></header>
+        <article>
+          <h4>click en el enlace</h4>
+          <ul>
+            <li>
+              Toda la documentación de esta página está extraída de
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+                target="_blank"
+                >MDN</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
